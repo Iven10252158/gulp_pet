@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     .head-section-picture{
-     
+        z-index: 1;
       background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-1.png');
       padding-top: 66%;
       @include pad_pro{

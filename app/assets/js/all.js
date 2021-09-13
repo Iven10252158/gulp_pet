@@ -2,7 +2,7 @@ $(document).ready(function(){
   // Navbar按鈕
   $('.bar').click(function(event){
     event.preventDefault();
-    $('.nav-list').toggleClass('active');
+    $('.navBar-list').toggleClass('navBar-active');
   });
   // QA折疊選單
   $('.question li .answer ').click(function(e){

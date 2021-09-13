@@ -7,24 +7,19 @@ nav{
     box-shadow:0 10px 40px gray;
     position: relative;
 
-    label{
+    .bar{
       display: none;
-    }
       @include pad{
-        label {
-          position: absolute;
-          right: 10px;
-          top: 20px;
-          display: block;
-          padding: 0 10px;
-          .bar{
-            cursor: pointer;
-            font-size: 26px;
-            padding: 10px;
-            color: #F8B52E;
-          }
-        }
+        position: absolute;
+        top: 10px;
+        right: 0;
+        display: block;
+        cursor: pointer;
+        font-size: 26px;
+        padding: 10px;
+        color: $bar-color;
       }
+    }
 
 }
 .navBar{
@@ -41,7 +36,8 @@ nav{
       }
     }
 
-    .nav-item {
+    .navBar-item {
+      z-index: 2;
       @include pad{
         position: absolute;
         top: 60px;
@@ -50,11 +46,10 @@ nav{
         right: 0;
       }
      
-    .nav-list{
+    .navBar-list{
       display: flex;
       align-items: center;
       padding: 20px 0;
-
       @include pad{
         opacity:0;
         display: block;
@@ -85,7 +80,7 @@ nav{
         }
       }
     }
-    .active{
+    .navBar-active{
       opacity:1;
       transition:all .5s;
     }
