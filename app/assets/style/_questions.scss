@@ -1,0 +1,36 @@
+.question{
+    li{
+     margin-bottom: 10px;
+      .answer{
+        display: block;
+        border:1px solid #000;
+        line-height: 20px;
+        padding: 10px;
+        cursor:pointer;
+
+       h5{
+        font-size: 20px;
+        font-weight: bold;
+        @include pad{
+            font-size: 16px;
+        }
+       }
+       .fas fa-chevron-down{
+        transform: rotate(0deg);
+        transition: all 0.6s; 
+       }
+     }
+     p{
+        padding: 15px;
+        display: none;
+        border:1px solid #000;
+        @include pad{
+            font-size: 14px;
+        }
+      }
+   }
+   
+   .active{
+     transform: rotate(180deg);
+   }
+ }

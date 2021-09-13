@@ -1,0 +1,243 @@
+.header-section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    .head-section-picture{
+     
+      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-1.png');
+      padding-top: 66%;
+      @include pad_pro{
+        padding-top: 50%;
+        margin: 0 auto;
+      }
+      @include pad{
+        padding-top: 80%;
+      }
+      @include mobile{
+          padding-top: 100%;
+      }
+    }
+    .head-section-text{
+      color: $main-color;
+      font-weight: bold;
+    }
+  }
+
+.card{
+    color: $main-color;
+    box-shadow:2px 2px 8px gray;
+    .card-img-top{
+        height:120px;
+        object-fit:cover;
+        object-position:30% 30%;
+        @include pad{
+        height: 100px;
+        }
+    }
+    .card-body{
+        text-align: center;
+        position: relative;
+        .babysit-photo{
+        position: absolute;
+        top: -50px;
+        }
+        .card-title{
+        margin-top: 40px;
+        @include pad{
+            font-size: 18px;
+        }
+        }
+        .card-text{
+        font-size: 16px;
+        @include pad{
+            font-size: 12px;
+        }
+        }
+    }
+    ul{
+        li{
+        h6{
+            @include pad{
+            font-size: 14px;
+            }
+        }
+        p{
+            font-size: 26px;
+            font-weight: bold;
+            @include pad{
+            font-size: 24px;
+            }
+            span{
+            font-size: 16px;
+            font-weight: normal;
+            @include pad{
+                font-size: 14px;
+            }
+            }
+        }
+        }
+    }
+  }
+
+.card-img{
+    height: 350px;
+    position: relative;
+    border-radius: $border-radius;
+    @include pad_pro{
+        height: 200px;
+    }
+    .reservation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.6);
+        transition:all .3s ease-in-out;
+        border-radius: $border-radius;
+            &:hover{
+                cursor:pointer;
+                background-color: rgba(0,0,0,0.1);
+                transition:all .3s ease-in-out;
+                border-radius: $border-radius;
+            }
+            .text-link{
+                color: $reverse-text;
+                font-size: 24px;
+                font-weight: bolder;
+                text-decoration: none;
+            }
+    }
+}
+.custom-card-img{
+    height: 173px;
+    position: relative;
+    border-radius: $border-radius;
+    @include pad_pro {
+        height: 99px;
+    }
+    @include pad{
+        height: 200px;
+    }
+    .reservation{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.6);
+      transition:all .3s ease-in-out;
+      border-radius: $border-radius;
+        &:hover{
+            background-color: rgba(0,0,0,0.1);
+            transition:all .3s ease-in-out;
+            border-radius: $border-radius;
+        }
+        .text-link{
+            color: $reverse-text;
+            font-size: 24px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+    }
+}
+
+.sales-banner{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-9.jpeg');
+    position: relative;
+    height: 600px;
+
+    .banner-text-title{
+        position: absolute;
+        top: 20%;
+        font-size: $base-font-size * 4;
+        color: $reverse-text;
+        @include pad{
+            font-size: $base-font-size * 3.6;
+            top: 5%;
+        }
+        @include mobile{
+           font-size: $base-font-size * 3.6;
+           top: 5%;
+        }
+    }
+    ul{
+        position: absolute;
+        top: 50%;
+        @include pad{
+            font-size: $base-font-size * 3.6;
+            top: 15%;
+        }
+        @include mobile{
+            position: absolute;
+            top: 15%;
+        }
+        li{
+            border-left: 3px solid $reverse-text;
+            padding-bottom: 60px;
+            @include pad{
+                padding-bottom: 25px;
+                margin-top:10px ;
+            }
+            @include mobile{
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+            
+            .number{
+                font-size: $base-font-size * 4.8;
+                font-weight: bold;
+                color: $reverse-text;
+            }
+        
+            .content{
+                font-size: $base-font-size * 2;
+                color: $reverse-text;
+            }
+        }
+    }
+    
+
+    
+}
+
+.help{
+    background-color: $bar-color;
+}
+
+.logo{
+    height: 50px;
+    width: 110px;
+    // background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/logo.svg');
+    @include pad{
+      margin: 0 auto;
+    }
+}
+.link{
+a{
+    color: $main-color;
+    text-decoration: none;
+}
+}
+.arrowBtn{
+    position: absolute;
+    bottom: 5%;
+    cursor: pointer;
+    .down-arrow{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #D54100;
+        position: relative;
+    
+        .arrow {
+            width: 0;
+            height: 0;
+            border: 10px solid;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            top: 40%;
+            left: 28%;
+            }
+    }
+}
