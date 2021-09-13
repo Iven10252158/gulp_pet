@@ -10019,16 +10019,14 @@ nav {
   -webkit-box-shadow: 0 10px 40px gray;
           box-shadow: 0 10px 40px gray;
   position: relative; }
-  nav label {
+  nav .bar {
     display: none; }
-  @media (max-width: 767px) {
-    nav label {
-      position: absolute;
-      right: 10px;
-      top: 20px;
-      display: block;
-      padding: 0 10px; }
-      nav label .bar {
+    @media (max-width: 767px) {
+      nav .bar {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        display: block;
         cursor: pointer;
         font-size: 26px;
         padding: 10px;
@@ -10051,49 +10049,51 @@ nav {
     @media (max-width: 767px) {
       .navBar .logo {
         margin: 0 auto; } }
-  @media (max-width: 767px) {
-    .navBar .nav-item {
-      position: absolute;
-      top: 60px;
-      bottom: 0;
-      left: 0;
-      right: 0; } }
-  .navBar .nav-item .nav-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 20px 0; }
+  .navBar .navBar-item {
+    z-index: 2; }
     @media (max-width: 767px) {
-      .navBar .nav-item .nav-list {
-        opacity: 0;
-        display: block;
-        background-color: #fff;
-        height: 100vh; } }
-    .navBar .nav-item .nav-list li {
-      padding: 0 30px; }
+      .navBar .navBar-item {
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0; } }
+    .navBar .navBar-item .navBar-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 20px 0; }
       @media (max-width: 767px) {
-        .navBar .nav-item .nav-list li {
-          text-align: center;
-          padding: 10px 0;
-          border-bottom: 2px solid #DEDEDE; } }
-      .navBar .nav-item .nav-list li a {
-        text-decoration: none;
-        color: #772400; }
-        .navBar .nav-item .nav-list li a:hover {
-          border-bottom: 1px solid #772400; }
+        .navBar .navBar-item .navBar-list {
+          opacity: 0;
+          display: block;
+          background-color: #fff;
+          height: 100vh; } }
+      .navBar .navBar-item .navBar-list li {
+        padding: 0 30px; }
         @media (max-width: 767px) {
-          .navBar .nav-item .nav-list li a {
-            font-size: 20px; }
-            .navBar .nav-item .nav-list li a:hover {
-              border-bottom: 2px solid #772400; } }
-  .navBar .nav-item .active {
-    opacity: 1;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s; }
+          .navBar .navBar-item .navBar-list li {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 2px solid #DEDEDE; } }
+        .navBar .navBar-item .navBar-list li a {
+          text-decoration: none;
+          color: #772400; }
+          .navBar .navBar-item .navBar-list li a:hover {
+            border-bottom: 1px solid #772400; }
+          @media (max-width: 767px) {
+            .navBar .navBar-item .navBar-list li a {
+              font-size: 20px; }
+              .navBar .navBar-item .navBar-list li a:hover {
+                border-bottom: 2px solid #772400; } }
+    .navBar .navBar-item .navBar-active {
+      opacity: 1;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
 
 .header-section {
   position: relative;
@@ -10104,6 +10104,7 @@ nav {
       -ms-flex-align: center;
           align-items: center; }
   .header-section .head-section-picture {
+    z-index: 1;
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-1.png");
     padding-top: 66%; }
     @media (max-width: 992px) {
