@@ -10068,7 +10068,6 @@ nav {
       .navBar .navBar-item {
         position: absolute;
         top: 60px;
-        bottom: 0;
         left: 0;
         right: 0; } }
     .navBar .navBar-item .navBar-list {
@@ -10077,12 +10076,15 @@ nav {
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center;
-      padding: 20px 0; }
+              align-items: center; }
       @media (max-width: 767px) {
         .navBar .navBar-item .navBar-list {
-          opacity: 0;
           display: block;
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: all .8s ease-out;
+          -o-transition: all .8s ease-out;
+          transition: all .8s ease-out;
           background-color: #fff; } }
       .navBar .navBar-item .navBar-list li {
         padding: 0 30px; }
@@ -10102,10 +10104,7 @@ nav {
               .navBar .navBar-item .navBar-list li a:hover {
                 border-bottom: 2px solid #772400; } }
     .navBar .navBar-item .navBar-active {
-      opacity: 1;
-      -webkit-transition: all .5s;
-      -o-transition: all .5s;
-      transition: all .5s; }
+      max-height: 300px; }
 
 .header-section {
   position: relative;
