@@ -2,11 +2,13 @@
     background-size: cover;
     background-position: center center;
   }
-  
+body{
+  position: relative;
+}
 nav{
-    box-shadow:0 10px 40px gray;
-    position: relative;
-
+    
+    background-color: #fff;
+    z-index: 99999;
     .bar{
       display: none;
       @include pad{
@@ -20,7 +22,14 @@ nav{
         color: $bar-color;
       }
     }
-
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow:0 1px 10px gray;
+  transition: all 1s ease-in-out;
 }
 .navBar{
     display: flex;
@@ -54,7 +63,6 @@ nav{
         opacity:0;
         display: block;
         background-color: $reverse-text;
-        height: 100vh;
       }
       
       li{
