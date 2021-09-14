@@ -6,8 +6,7 @@ body{
   position: relative;
 }
 nav{
-    
-    background-color: #fff;
+    background-color: $reverse-color;
     z-index: 99999;
     .bar{
       display: none;
@@ -17,7 +16,7 @@ nav{
         right: 0;
         display: block;
         cursor: pointer;
-        font-size: 26px;
+        font-size: $base-font-size * 2.6; //26px;
         padding: 10px;
         color: $bar-color;
       }
@@ -50,7 +49,6 @@ nav{
       @include pad{
         position: absolute;
         top: 60px;
-        bottom: 0;
         left: 0;
         right: 0;
       }
@@ -58,11 +56,12 @@ nav{
     .navBar-list{
       display: flex;
       align-items: center;
-      padding: 20px 0;
       @include pad{
-        opacity:0;
         display: block;
-        background-color: $reverse-text;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .8s ease-out;
+        background-color: $reverse-color;
       }
       
       li{
@@ -70,7 +69,7 @@ nav{
         @include pad{
           text-align: center;
           padding: 10px 0;
-          border-bottom: 2px solid #DEDEDE;
+          border-bottom: 2px solid $secondary-white-color;
         }
         
         a{
@@ -80,7 +79,7 @@ nav{
             border-bottom: 1px solid $main-color;
           }
           @include pad {
-            font-size: 20px;
+            font-size: $base-font-size * 2; //20px;
             &:hover{
               border-bottom: 2px solid $main-color;
             }
@@ -89,8 +88,7 @@ nav{
       }
     }
     .navBar-active{
-      opacity:1;
-      transition:all .5s;
+      max-height: 300px;
     }
   }
 }

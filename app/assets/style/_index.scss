@@ -41,43 +41,43 @@
         text-align: center;
         position: relative;
         .babysit-photo{
-        position: absolute;
-        top: -50px;
+            position: absolute;
+            top: -50px;
         }
         .card-title{
-        margin-top: 40px;
-        @include pad{
-            font-size: 18px;
-        }
+            margin-top: 40px;
+            @include pad{
+                font-size: $base-font-size * 1.8; //18px;
+            }
         }
         .card-text{
-        font-size: 16px;
-        @include pad{
-            font-size: 12px;
-        }
+            font-size: $base-font-size * 1.6; //16px;
+            @include pad{
+                font-size: $base-font-size * 1.2; //12px;
+            }
         }
     }
     ul{
         li{
-        h6{
-            @include pad{
-            font-size: 14px;
+            h6{
+                @include pad{
+                    font-size: $base-font-size * 1.4; //14px;
+                }
             }
-        }
-        p{
-            font-size: 26px;
-            font-weight: bold;
-            @include pad{
-            font-size: 24px;
+            p{
+                font-size: $base-font-size * 2.6; //26px;
+                font-weight: bold;
+                @include pad{
+                    font-size: $base-font-size * 2.4; //24px;
+                }
+                span{
+                    font-size: $base-font-size * 1.6; //16px;
+                    font-weight: normal;
+                @include pad{
+                    font-size: $base-font-size * 1.4 ;//14px;
+                    }
+                }
             }
-            span{
-            font-size: 16px;
-            font-weight: normal;
-            @include pad{
-                font-size: 14px;
-            }
-            }
-        }
         }
     }
   }
@@ -105,8 +105,8 @@
                 border-radius: $border-radius;
             }
             .text-link{
-                color: $reverse-text;
-                font-size: 24px;
+                color: $reverse-color;
+                font-size: $base-font-size * 2.4 ; //24px
                 font-weight: bolder;
                 text-decoration: none;
             }
@@ -137,8 +137,8 @@
             border-radius: $border-radius;
         }
         .text-link{
-            color: $reverse-text;
-            font-size: 24px;
+            color: $reverse-color;
+            font-size: $base-font-size * 2.4 ; //24px
             font-weight: bolder;
             text-decoration: none;
         }
@@ -154,7 +154,7 @@
         position: absolute;
         top: 20%;
         font-size: $base-font-size * 4;
-        color: $reverse-text;
+        color: $reverse-color;
         @include pad{
             font-size: $base-font-size * 3.6;
             top: 5%;
@@ -176,7 +176,7 @@
             top: 15%;
         }
         li{
-            border-left: 3px solid $reverse-text;
+            border-left: 3px solid $reverse-color;
             padding-bottom: 60px;
             @include pad{
                 padding-bottom: 25px;
@@ -190,12 +190,12 @@
             .number{
                 font-size: $base-font-size * 4.8;
                 font-weight: bold;
-                color: $reverse-text;
+                color: $reverse-color;
             }
         
             .content{
                 font-size: $base-font-size * 2;
-                color: $reverse-text;
+                color: $reverse-color;
             }
         }
     }
@@ -211,16 +211,15 @@
 .logo{
     height: 50px;
     width: 110px;
-    // background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/logo.svg');
     @include pad{
       margin: 0 auto;
     }
 }
 .link{
-a{
-    color: $main-color;
-    text-decoration: none;
-}
+    a{
+        color: $main-color;
+        text-decoration: none;
+    }
 }
 .arrowBtn{
     position: absolute;
@@ -235,14 +234,14 @@ a{
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        background-color: #D54100;
+        background-color: $seldom-color;
         position: relative;
     
         .arrow {
             width: 0;
             height: 0;
             border: 10px solid;
-            border-color: #fff transparent transparent transparent;
+            border-color: $reverse-color transparent transparent transparent;
             position: absolute;
             top: 40%;
             left: 28%;

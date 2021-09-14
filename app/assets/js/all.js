@@ -24,7 +24,7 @@ $(document).ready(function(){
   $('.arrowBtn a').click(function(){
     event.preventDefault();
       $('html, body').animate({
-        scrollTop :1485
+        scrollTop :1400
       },100)
   })
   // QA折疊選單
