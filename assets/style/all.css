@@ -10124,7 +10124,7 @@ nav {
         margin: 20px auto; } }
     @media (max-width: 767px) {
       .header-section .head-section-picture {
-        padding-top: 80%;
+        padding-top: 100%;
         margin: 0; } }
     @media (max-width: 576px) {
       .header-section .head-section-picture {
