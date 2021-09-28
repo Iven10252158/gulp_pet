@@ -11,9 +11,18 @@ Demo:https://iven10252158.github.io/gulp_pet/
 - 使用 jQuery 進行互動效果、頁面動畫設計
 
 ## 首頁
+- PC <br>
 ![](https://i.imgur.com/vwhgx92.gif)
 ### 行動裝置
 - 平板 <br>
-![](https://i.imgur.com/3toe6N6.gif)
+![](https://i.imgur.com/dMWeMZX.gif)
+- 手機 <br>
+![](https://i.imgur.com/0dPcX05.gif)
+
 ## 常見問題
+- PC <br>
 ![](https://i.imgur.com/v0yJH73.gif)
+- 平板 <br>
+![](https://i.imgur.com/ptcBwMy.gif)
+- 手機 <br>
+![](https://i.imgur.com/jvR5YYc.gif)
