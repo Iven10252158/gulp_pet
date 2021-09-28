@@ -1,7 +1,7 @@
 ![](https://i.imgur.com/GtAFEZj.png)
 # PETPET寵物電商
-Demo:https://iven10252158.github.io/gulp_pet/ <br>
-設計稿:吳俊儀 老師
+Demo : https://iven10252158.github.io/gulp_pet/ <br>
+設計稿 : 吳俊儀 老師
 
 ## 專案說明
 - 製作首頁及常見問題頁面
@@ -26,3 +26,5 @@ Demo:https://iven10252158.github.io/gulp_pet/ <br>
 ![](https://i.imgur.com/ptcBwMy.gif)
 - 手機 <br>
 ![](https://i.imgur.com/jvR5YYc.gif)
+
+其他細節部分，歡迎至 Demo 網站觀看 https://iven10252158.github.io/gulp_pet/
