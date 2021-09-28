@@ -13,7 +13,7 @@ Demo:https://iven10252158.github.io/gulp_pet/
 ## 首頁
 ![](https://i.imgur.com/vwhgx92.gif)
 ### 行動裝置
-- 平板
+- 平板 <br>
 ![](https://i.imgur.com/3toe6N6.gif)
 ## 常見問題
 ![](https://i.imgur.com/v0yJH73.gif)
