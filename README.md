@@ -14,6 +14,6 @@ Demo:https://iven10252158.github.io/gulp_pet/
 ![](https://i.imgur.com/vwhgx92.gif)
 ### 行動裝置
 - 平板
-![](https://i.imgur.com/3JmvpIJ.gif)
+![Image](https://i.imgur.com/3JmvpIJ.gif)
 ## 常見問題
 ![](https://i.imgur.com/v0yJH73.gif)
