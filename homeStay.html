@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>寵物寄宿</title>
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="py-3 py-md-2">
+      <div class="navBar container-fluid">
+        <a href="index.html" class="logo bg-cover ms-md-5"></a>
+        <div class="navBar-item">
+          <ul class="navBar-list mb-0 list-unstyled">
+            <li><a href="#">預約服務</a></li>
+            <li><a href="#">成為寵物保姆</a></li>
+            <li><a href="questions.html">常見問題</a></li>
+          </ul>
+        </div>
+      </div>
+      <span>
+        <a href="#" class="bar">
+          <i class="fas fa-bars"></i>
+        </a>
+      </span>
+    </nav>
+  </header>
+
+  <div class="bg-opacity"></div>
+<!-- 預約視窗 開始 -->
+<div class="reserve-modal" style="display:none;">
+  <p class="reserve-success">
+    <i class="fas fa-paw"></i>
+  </p>
+  <span>請選擇日期</span>
+  <p class="closeBtn">Ｘ</p>
+  <input type="text" class="chooseDate form-control" name="chooseDate"/>
+  <button class="reserve-confirm btn btn-danger w-50">確定預約</button>
+</div>
+<div class="modal-success" style="display:none;">
+  <p class="reserve-success">
+    <i class="fas fa-paw"></i>
+  </p>
+  <h4>預約成功</h4>
+  <p class="closeBtn">Ｘ</p>
+</div>
+<!-- 預約視窗 結束 -->
+<div class="container position-relative">
+  <div class="row justify-content-end flex-md-row-reverse">
+    <!-- 查看照片 開始 -->
+    <div class="col-12 col-md-5 col-lg-6" style="padding-top: 66px;">
+      <div class="carousel mt-2">
+        <div class="carousel__item--active">
+          <img src="https://images.unsplash.com/photo-1567049787320-7923ab116c83?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="img">
+        </div>
+        <div class="carousel__inner mb-5">
+          <a class="text-decoration-none" href="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+            <img src="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="carousel__item img">
+          </a>
+          <a class="text-decoration-none" href="https://images.unsplash.com/photo-1563468706294-7e60627ec250?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+            <img src="https://images.unsplash.com/photo-1563468706294-7e60627ec250?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="carousel__item">
+          </a>
+          <a class="text-decoration-none" href="https://images.unsplash.com/photo-1549379702-9692e37d2e58?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1345&q=80">
+            <img src="https://images.unsplash.com/photo-1549379702-9692e37d2e58?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1345&q=80" class="carousel__item">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- 查看照片 結束 -->
+    <div class="col-12 col-md-7 col-lg-6 sticky-lg-top h-100 text-primary" style="padding-top: 66px; z-index: 1;">
+      <div class="home-stay-title d-flex mt-3">
+        <h2>毛孩好家</h2>
+        <p class="text-warning pt-1 ps-2">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </p>
+      </div>
+      <div class="home-stay-sub-title mb-5">
+        <h5>給予毛孩最舒適的環境是我們的職責！</h5>
+        <p>已提供 52 筆服務、並獲得 30 個評價</p>
+      </div>
+      <div class="home-stay-service">
+        <h5>服務內容</h5>
+        <p class="mb-2">寄宿 NT$ 450 /晚</p>
+        <p class="mb-0">美容洗澡 NT$ 500 （含剪指甲、剃腳底毛、清耳朵）</p>
+        <small class="text-danger">個性貓另加價</small>
+        <p class="my-2">到府保姆 NT$ 550 /晚</p>
+        <div class="d-flex">
+          <p class="pe-2">
+            <i class="text-danger fas fa-map-marker-alt"></i>  
+          </p>
+          <p>高雄市鹽埕區七賢三路123號</p>
+        </div>
+      </div>
+      <button class="reserveBtn btn btn-danger w-75 mb-5">立即預約</button>
+    </div>
+    <div class="col-lg-6 offset-lg-6 text-primary" style="padding-top: 66px;">
+      <ul class="list-unstyled mt-md-5 about-petpet">
+        <li class="pb-3">
+          <h5 class="mt-4 mt-md-0">關於</h5>
+          <p>家中有5隻貓寶貝，對貓咪有瘋狂的熱愛。目前已經照顧超過30位狗狗貓咪朋友！對於我來說，能夠與你們相遇都是緣分！</p>
+        </li>
+        <li class="pb-3">
+          <h5>經歷</h5>
+          <p>曾接手過數次奶貓，照顧後送養成功，目前都是健健康康的毛孩。</p>
+        </li>
+        <li class="pb-3">
+          <h5>技能證照</h5>
+          <p>寵物美容丙級技術證</p>
+        </li>
+        <li class="pb-3">
+          <h5>提供</h5>
+          <p>貓砂盆、罐頭、乾飼料</p>
+        </li>
+        <li class="pb-3">
+          <h5>毛孩活動範圍</h5>
+          <p>想去的任何地方</p>
+        </li>
+        <li class="pb-3">
+          <h5>服務地區</h5>
+          <p>高雄市</p>
+        </li>
+      </ul>
+      <h3 class="fs-2 mb-4">飼主評論</h3>
+      <ul class="row list-unstyled mb-5">
+        <li class="col-12 col-md-6 mb-3">
+          <div class="card h-100 flex-row align-items-center py-4">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-4.png" class="ms-5 ms-lg-3 img">
+            <div class="px-2 ms-2 ms-sm-4 ms-md-3">
+              <h6 class="mb-3">葉子
+                <span class="text-muted">Oct 17 2020</span>
+              </h6>
+              <div class="mb-0">
+                <p class="text-warning mb-0">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+                <p class="mb-0">服務很秋！</p>
+              </div>
+              
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 mb-3">
+          <div class="card h-100 flex-row align-items-center py-4">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-5.png" class= "ms-5 ms-lg-3 img">
+            <div class="px-2 ms-2 ms-sm-4 ms-md-3">
+              <h6 class="mb-3">Joanne
+                <span class="text-muted">Oct 17 2020</span>
+              </h6>
+                <div class="mb-0">
+                  <p class="text-warning mb-0">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="mb-0">貓完全不想回家了。</p>
+                </div>
+                
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 mb-3">
+          <div class="card h-100 flex-row align-items-center py-4">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-6.png" class="ms-5 ms-lg-3 img">
+            <div class="px-2 ms-2 ms-sm-4 ms-md-3">
+              <h6 class="mb-3">Ray
+                <span class="text-muted">
+                  Oct 17 2020
+                </span>
+              </h6>
+                <p class="text-warning mb-0">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+                <p class="mb-0">超喜歡超棒超讚的...</p>
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 mb-3">
+          <div class="card h-100 flex-row align-items-center py-4">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-7.png" class="ms-5 ms-lg-3 img">
+            <div class="px-2 ms-2 ms-sm-4 ms-md-3">
+              <h6 class="mb-3">穎旻
+                <span class="text-muted">
+                  Oct 17 2020
+                </span>
+              </h6>
+                <p class="text-warning mb-0">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+                <p class="mb-0">下次還會麻煩您～</p>
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 mb-3">
+          <div class="card h-100 flex-row align-items-center py-4">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-8.png" class="ms-5 ms-lg-3 img">
+            <div class="px-2 ms-2 ms-sm-4 ms-md-3">
+              <h6 class="mb-3">俊儀
+                <span class="text-muted">
+                  Oct 17 2020
+                </span>
+              </h6>
+              <p class="text-warning mb-0">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p class="mb-0">讚的...</p>
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 mb-3">
+          <div class="card h-100 flex-row align-items-center py-4">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-9.png" class="ms-5 ms-lg-3 img">
+            <div class="px-2 ms-2 ms-sm-4 ms-md-3">
+              <h6 class="mb-3">子琪
+                <span class="text-muted">
+                  Oct 17 2020
+                </span>
+              </h6>
+              <p class="text-warning mb-0">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p class="mb-0">服務很棒耶哈哈哈！</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      
+      <h3 class="fs-2 mb-4">其他 寄宿 寵物保姆</h3>
+      <ul class="row list-unstyled mb-5">
+        <li class="card-group-item col-6 col-md-4 mb-3 mb-md-5 mb-lg-5">
+          <div class="card shadow-sm bg-white h-100">
+            <div class="custom-card-img-top bg-cover" style="background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-2.jpeg')"></div>
+            <div class="card-body py-2 px-3 px-lg-4 text-start">
+              <h6 class="card-title my-3">寵屋屋</h6>
+              <p class="card-text text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p>寄宿、美容洗澡、到府保姆</p>
+            </div>
+          </div>
+        </li>
+        <li class="card-group-item col-6 col-md-4 mb-3 mb-md-5 mb-lg-5">
+          <div class="card shadow-sm bg-white h-100">
+            <div class="custom-card-img-top bg-cover" style="background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-6.jpeg');"></div>
+            <div class="card-body py-2 px-3 px-lg-4 text-start">
+              <h6 class="card-title my-3">汪汪隊</h6>
+              <p class="card-text text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p>寄宿、到府保姆、寵物行為訓練</p>
+            </div>
+          </div>
+        </li>
+        <li class="card-group-item col-6 col-md-4 mb-3 mb-md-5 mb-lg-5">
+          <div class="card shadow-sm bg-white h-100">
+            <div class="custom-card-img-top bg-cover" style="background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-8.jpeg');"></div>
+            <div class="card-body py-2 px-3 px-lg-4 text-start">
+              <h6 class="card-title my-3">萌寵底家</h6>
+              <p class="card-text text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p>寄宿、到府保姆</p>
+            </div>
+          </div>
+        </li>
+        <li class="card-group-item col-6 col-md-4 mb-3 mb-md-5 mb-lg-5">
+          <div class="card shadow-sm bg-white h-100">
+            <div class="custom-card-img-top bg-cover" style="background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-4.jpeg');"></div>
+            <div class="card-body py-2 px-3 px-lg-4 text-start">
+              <h6 class="card-title my-3">妖貓X僕SS</h6>
+              <p class="card-text text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p>寄宿、到府保姆</p>
+            </div>
+          </div>
+        </li>
+        <li class="card-group-item col-6 col-md-4 mb-3 mb-md-5 mb-lg-5">
+          <div class="card shadow-sm bg-white h-100">
+            <div class="custom-card-img-top bg-cover" style="background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-7.jpeg');"></div>
+            <div class="card-body py-2 px-3 px-lg-4 text-start">
+              <h6 class="card-title my-3">卯咪</h6>
+              <p class="card-text text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p>寄宿、寵物行為訓練</p>
+            </div>
+          </div>
+        </li>
+        <li class="card-group-item col-6 col-md-4 mb-3 mb-md-5 mb-lg-5">
+          <div class="card shadow-sm bg-white h-100">
+            <div class="custom-card-img-top bg-cover" style="background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-5.jpeg');"></div>
+            <div class="card-body py-2 px-3 px-lg-4 text-start">
+              <h6 class="card-title my-3">貓是主我是僕</h6>
+              <p class="card-text text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <p>寄宿</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+ <!-- 頁尾 -->
+ <section>
+  <div class="help mb-md-5">
+    <div class="container py-5 text-primary">
+      <h2>有任何我們能幫助您的嗎？</h2>
+      <p>輸入電子信箱<br> 將有專業人員在線幫您解決所有問題</p>
+      <div class="row input-group">
+        <div class="d-flex col-md-6">
+          <div class="col-6 col-md-7">
+            <input type="email" class="form-control" placeholder="example@gmail.com">
+          </div>
+          <div class="col-6 col-md-5">
+            <button type="type" class="btn btn-danger px-4">送出</button>
+          </div>
+        </div>
+    </div>
+    </div>  
+  </div>
+</section>
+
+  <footer class="container">
+    <ul class="list-unstyled row d-flex justify-content-md-between mb-md-5 text-primary">
+      <li class="col-md-3 mb-0">
+        <img class="logo mb-md-2 mt-3 mt-md-0" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/logo.svg" alt="">
+        <!-- <div class="logo mb-md-2 ms-0"></div> -->
+        <div class="link d-none d-md-block">
+          <p><a href="#">關於我們</a></p>
+          <p><a href="#">幫助中心</a></p>
+          <p><a href="#">使用條款</a></p>
+          <p><a href="#">隱私政策</a></p>
+        </div>
+      </li>
+      <li class="col-md-3 d-none d-md-block">
+       <h3 class="mt-2 mb-3">寵物服務</h3> 
+        <div class="link">
+          <p><a href="#">寵物寄宿</a></p>
+          <p><a href="#">寵物到府保姆</a></p>
+          <p><a href="#">寵物美容洗澡</a></p>
+          <p><a href="#">寵物行為訓練</a></p>
+        </div>
+      </li>
+      <li class="col-md-3 d-none d-md-block">
+        <h3 class="mt-2 mb-3">加入我們</h3>
+        <div class="link">
+          <p><a href="#">成為寵物保姆</a></p>
+          <p><a href="#">加入寵物計程車</a></p>
+          <p><a href="#">專屬 APP 下載</a></p>
+          <p><a href="#">相關合約條款</a></p>
+        </div>
+      </li>
+      <li class="col-md-3 d-none d-md-block">
+        <h3 class="mt-2 mb-3">聯繫我們</h3>
+        <div class="link">
+         <a href="petpet@petmail.com">petpet@petmail.com</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="list-unstyled d-flex justify-content-between">
+      <li class="d-none d-md-block text-primary">
+        <span class="pe-2">
+          <i class="fas fa-phone-alt"></i>
+          <a href="#" class="tel text-primary text-decoration-none">07-123-4567</a>
+        </span>
+      </li>
+      <li class="text-primary mt-0">
+        <p>Copyright © 2020 PetPet. All rights reserved.</p>
+      </li>
+    </ul>
+  </footer>
+  <script src="./assets/js/vendors.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+</html>

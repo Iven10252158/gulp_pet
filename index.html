@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首頁</title>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="./assets/style/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -31,7 +31,8 @@
     </nav>
   </header>
 
-  <section class="header-section row g-0">
+  <div class="bg-opacity"></div>
+<section class="header-section row g-0">
     <div class="col-lg-5 col-md-4  head-section-picture bg-cover"></div>
     <div class="col-lg-7 col-sm-10 mx-auto">
       <div class="head-section-text ps-sm-6 ps-lg-0 mx-lg-5 my-3 my-lg-0 text-center text-sm-start">
@@ -81,14 +82,30 @@
 
 <main>
   <!-- 熱門保姆section -->
-  <section>
+  <section class="hot-babysit">
+     <!-- 預約視窗 -->
+    <div class="reserve-modal" style="display:none;">
+      <p class="reserve-success">
+        <i class="fas fa-paw"></i>
+      </p>
+      <span>請選擇日期</span>
+      <p class="closeBtn">Ｘ</p>
+      <input type="text" class="chooseDate form-control" name="chooseDate"/>
+      <button class="reserve-confirm btn btn-danger w-50">確定預約</button>
+    </div>
+    <div class="modal-success" style="display:none;">
+      <p class="reserve-success">
+        <i class="fas fa-paw"></i>
+      </p>
+      <h4>預約成功</h4>
+      <p class="closeBtn">Ｘ</p>
+    </div>
     <div class="container">
       <div class="text-primary mt-5 mb-3">
         <h4>本月熱門保姆</h4>
         <h6>即時瞭解您的需求，安排最適合毛孩的寵物保姆！</h6>
       </div>
-      
-      <div class="row mb-5">
+      <div class="baby-sister row mb-5">
         <div class="col-md-4 mb-3 mb-md-0">
           <div class="card h-100">
             <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-2.jpeg" class="card-img-top" alt="...">
@@ -96,22 +113,23 @@
               <img class="babysit-photo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-1.png">
               <h5 class="card-title">Jamie</h5>
               <p class="card-text">寄宿、美容、寵物行為訓練</p>
-              <button type="button" class="btn btn-danger w-50">預約</button>
+              <button type="button" class="reserveBtn btn btn-danger w-50">預約</button>
             </div>   
-              <ul class="list-unstyled d-flex justify-content-around px-md-3 my-3 mb-0">
-                <li>
-                  <h6>獲得評價</h6>
-                  <p>198
-                    <span>則</span>
-                  </p>
-                </li>
-                <li>
-                  <h6>已完成訂單</h6>
-                  <p>500
-                    <span>件</span>
-                  </p>
-                </li>
-              </ul>
+
+            <ul class="list-unstyled d-flex justify-content-around px-md-3 my-3 mb-0">
+              <li>
+                <h6>獲得評價</h6>
+                <p>198
+                  <span>則</span>
+                </p>
+              </li>
+              <li>
+                <h6>已完成訂單</h6>
+                <p>500
+                  <span>件</span>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="col-md-4 mb-3 mb-md-0">
@@ -121,8 +139,9 @@
               <img class="babysit-photo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-2.png">
               <h5 class="card-title">Eric</h5>
               <p class="card-text">寄宿、美容</p>
-              <button type="button" class="btn btn-danger w-50">預約</button>
-            </div>   
+              <button type="button" class="reserveBtn btn btn-danger w-50">預約</button>
+            </div>
+
             <ul class="list-unstyled d-flex justify-content-around px-md-3 my-3 mb-0">
               <li>
                 <h6>獲得評價</h6>
@@ -146,8 +165,8 @@
               <img class="babysit-photo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/person-3.png">
               <h5 class="card-title">Yvonne</h5>
               <p class="card-text">美容、寵物行為訓練</p>
-              <button type="button" class="btn btn-danger w-50">預約</button>
-            </div>   
+              <button type="button" class="reserveBtn btn btn-danger w-50">預約</button>
+            </div>
               <ul class="list-unstyled d-flex justify-content-around px-md-3 my-3 mb-0">
                 <li>
                   <h6>獲得評價</h6>
@@ -179,7 +198,7 @@
         <li class="col-md-4 pe-sm-1">
           <div class="card-img mb-3 mb-md-0" style="background:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-5.jpeg') center center / cover;">
             <div class="reservation d-flex justify-content-center align-items-center">
-              <a href="#" class="text-link">寵物寄宿</a>
+              <a href="homeStay.html" class="text-link">寵物寄宿</a>
             </div>
           </div>
         </li>
