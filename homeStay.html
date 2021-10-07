@@ -30,35 +30,17 @@
       </span>
     </nav>
   </header>
-
+  
   <div class="bg-opacity"></div>
-<!-- 預約視窗 開始 -->
-<div class="reserve-modal" style="display:none;">
-  <p class="reserve-success">
-    <i class="fas fa-paw"></i>
-  </p>
-  <span>請選擇日期</span>
-  <p class="closeBtn">Ｘ</p>
-  <input type="text" class="chooseDate form-control" name="chooseDate"/>
-  <button class="reserve-confirm btn btn-danger w-50">確定預約</button>
-</div>
-<div class="modal-success" style="display:none;">
-  <p class="reserve-success">
-    <i class="fas fa-paw"></i>
-  </p>
-  <h4>預約成功</h4>
-  <p class="closeBtn">Ｘ</p>
-</div>
-<!-- 預約視窗 結束 -->
 <div class="container position-relative">
-  <div class="row justify-content-end flex-md-row-reverse">
+  <div class="row justify-content-center flex-md-row-reverse">
     <!-- 查看照片 開始 -->
     <div class="col-12 col-md-5 col-lg-6" style="padding-top: 66px;">
       <div class="carousel mt-2">
         <div class="carousel__item--active">
           <img src="https://images.unsplash.com/photo-1567049787320-7923ab116c83?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="img">
         </div>
-        <div class="carousel__inner mb-5">
+        <div class="carousel__inner mb-md-5">
           <a class="text-decoration-none" href="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
             <img src="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="carousel__item img">
           </a>
@@ -101,8 +83,26 @@
           <p>高雄市鹽埕區七賢三路123號</p>
         </div>
       </div>
-      <button class="reserveBtn btn btn-danger w-75 mb-5">立即預約</button>
+      <button class="reserveBtn btn btn-danger w-100 w-md-75 mb-5">立即預約</button>
     </div>
+     <!-- 預約視窗 開始 -->
+      <div class="homestay-reserve-modal" style="display:none;">
+        <p class="reserve-success">
+          <i class="fas fa-paw"></i>
+        </p>
+        <span>請選擇日期</span>
+        <p class="closeBtn">Ｘ</p>
+        <input type="text" class="chooseDate form-control" name="chooseDate"/>
+        <button class="reserve-confirm btn btn-danger w-50">確定預約</button>
+      </div>
+      <div class="homestay-modal-success" style="display:none;">
+        <p class="reserve-success">
+          <i class="fas fa-paw"></i>
+        </p>
+        <h4>預約成功</h4>
+        <p class="closeBtn">Ｘ</p>
+      </div>
+  <!-- 預約視窗 結束 -->
     <div class="col-lg-6 offset-lg-6 text-primary" style="padding-top: 66px;">
       <ul class="list-unstyled mt-md-5 about-petpet">
         <li class="pb-3">
