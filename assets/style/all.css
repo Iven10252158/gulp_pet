@@ -10358,7 +10358,7 @@ body {
   max-width: 600px;
   height: auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 8px gray;
           box-shadow: 2px 2px 8px gray;
   background-color: #fff;
@@ -10372,7 +10372,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 0;
   right: 0;
@@ -10413,7 +10413,7 @@ body {
   max-width: 600px;
   height: auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 8px gray;
           box-shadow: 2px 2px 8px gray;
   background-color: #fff;
@@ -10427,7 +10427,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 0;
   right: 0;
@@ -10881,104 +10881,5 @@ body {
 
 .custom-card-img-top {
   padding-top: 80%; }
-
-.homestay-reserve-modal {
-  max-width: 600px;
-  height: auto;
-  padding: 20px;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 8px gray;
-          box-shadow: 2px 2px 8px gray;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-transform: translate(0px, -50%);
-      -ms-transform: translate(0px, -50%);
-          transform: translate(0px, -50%);
-  z-index: 4; }
-  .homestay-reserve-modal .reserve-success {
-    color: #F0AD25;
-    font-size: 36px;
-    margin: 0px; }
-  .homestay-reserve-modal span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #772400;
-    margin: 10px; }
-  .homestay-reserve-modal h4, .homestay-reserve-modal .h4 {
-    color: #772400; }
-  .homestay-reserve-modal button {
-    margin-top: 10px; }
-  .homestay-reserve-modal .chooseDate {
-    text-align: center; }
-  .homestay-reserve-modal .closeBtn {
-    position: absolute;
-    right: 20px;
-    color: gray;
-    border: 1px solid gray;
-    padding: 5px;
-    border-radius: 8px; }
-    .homestay-reserve-modal .closeBtn:hover {
-      background-color: gray;
-      color: #fff;
-      cursor: pointer; }
-
-.homestay-modal-success {
-  z-index: 3;
-  max-width: 600px;
-  height: auto;
-  padding: 20px;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 8px gray;
-          box-shadow: 2px 2px 8px gray;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-transform: translate(0px, -50%);
-      -ms-transform: translate(0px, -50%);
-          transform: translate(0px, -50%); }
-  .homestay-modal-success .reserve-success {
-    color: #F0AD25;
-    font-size: 36px;
-    margin: 0px; }
-  .homestay-modal-success h4, .homestay-modal-success .h4 {
-    color: #772400; }
-  .homestay-modal-success .closeBtn {
-    position: absolute;
-    right: 20px;
-    color: gray;
-    border: 1px solid gray;
-    padding: 5px;
-    border-radius: 8px; }
-    .homestay-modal-success .closeBtn:hover {
-      background-color: gray;
-      color: #fff;
-      cursor: pointer; }
 
 /*# sourceMappingURL=all.css.map */

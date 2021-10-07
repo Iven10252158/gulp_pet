@@ -48,36 +48,6 @@ $(document).ready(function () {
         }
       }, function (start, end, label) {});
     });
-  }); // 預約按鈕
-
-  $('.reserveBtn').click(function (e) {
-    e.preventDefault();
-    $('.homestay-reserve-modal').fadeIn(500);
-    $('.bg-opacity').addClass('active');
-    $('.reserve-confirm').click(function (e) {
-      e.preventDefault();
-      $('.homestay-reserve-modal').fadeOut(500);
-      $('.homestay-modal-success').fadeIn(500);
-    });
-    $('.closeBtn').on('click', function () {
-      e.preventDefault();
-      $('.homestay-reserve-modal').fadeOut(300);
-      $('.homestay-modal-success').fadeOut(300);
-      setTimeout(function () {
-        $('.bg-opacity').removeClass('active');
-      }, 300);
-    });
-    $(function () {
-      $('.chooseDate').daterangepicker({
-        singleDatePicker: true,
-        autoApply: true,
-        locale: {
-          format: 'YYYY-MM-DD',
-          daysOfWeek: ["日", "一", "二", "三", "四", "五", "六"],
-          monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
-        }
-      }, function (start, end, label) {});
-    });
   }); // 往下滑的箭頭按鈕
 
   $('.arrowBtn a').click(function () {
